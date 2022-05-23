@@ -1,0 +1,87 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Post</title>
+    <link rel="stylesheet" href="createpost.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header 1 -->
+    <div id="header1">
+      <div id="phonearea">
+        <i class="fa-solid fa-phone"></i>
+        <span id="phone">+919513330000</span>
+      </div>
+
+      <div id="emailarea">
+        <i class="fa-solid fa-envelope-circle-check"></i>
+        <span id="emial">lubnasiraz@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Header 2 -->
+    <div id="header2">
+      <i id="logo" class="fa-brands fa-drupal"></i>
+      <ul id="ul">
+        <a href="home"><li>Home</li></a>
+        <a href="home#secondbox"><li>category</li></a>
+        <a href="CreatePost"><li class="active">Create Post</li></a>
+        <a href="AllPost"><li>My Post</li></a>
+        <a href="home#infoarea"><li>Help</li></a>
+      </ul>
+      <i id="cross" class="fa-solid fa-x"></i>
+      <i id="lines" class="fa-solid fa-align-center"></i>
+    </div>
+
+    <!-- content section -->
+    <h1 id="tag">Create New Post</h1>
+
+    <!-- wrapper area -->
+    <div id="wrapper">
+      <div id="picarea"></div>
+      <div id="formarea">
+        <form action="/AllPost" method="post">
+        <input type="hidden" name="_id" value="{{olddata._id}}" />
+          <input
+            type="text"
+            name="title"
+            id="heading"
+            placeholder="Give a title..."
+            required
+          />
+          <textarea
+            id="data"
+            name="discription"
+            placeholder="write somthing about post..."
+            required
+          ></textarea>
+          <input type="submit" value="Create Post" id="btn" />
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">myblog@copyright</footer>
+
+    <script src="toggle.js"></script>
+
+  </body>
+</html>

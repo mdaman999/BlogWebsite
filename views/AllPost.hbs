@@ -1,0 +1,83 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Post</title>
+    <link rel="stylesheet" href="allpost.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Header 1 -->
+    <div id="header1">
+      <div id="phonearea">
+        <i class="fa-solid fa-phone"></i>
+        <span id="phone">+919513330000</span>
+      </div>
+
+      <div id="emailarea">
+        <i class="fa-solid fa-envelope-circle-check"></i>
+        <span id="emial">lubnasiraz@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Header 2 -->
+    <div id="header2">
+      <i id="logo" class="fa-brands fa-drupal"></i>
+      <ul id="ul">
+        <a href="home"><li>Home</li></a>
+        <a href="home#secondbox"><li>category</li></a>
+        <a href="CreatePost"><li>Create Post</li></a>
+        <a href="AllPost"><li class="active">My Post</li></a>
+        <a href="home#infoarea"><li>Help</li></a>
+      </ul>
+      <i id="cross" class="fa-solid fa-x"></i>
+      <i id="lines" class="fa-solid fa-align-center"></i>
+    </div>
+
+    {{! main content }}
+    <h1 id="tag">My All <span style="color: rgb(255, 0, 93);">P</span><span style="color: rgb(43, 0, 255);font-family: 'Rubik Moonrocks', cursive;">O</span><span style="color: rgb(0, 255, 21);">S</span><span style="color: rgb(255, 170, 11);">T</span></h1>
+
+    <div class="postarea">
+      {{#each list}}
+        <div class="box" style="order: {{order}};">
+          <h2 class="title">{{title}}</h2>
+          <p class="discription" style="cursor:default">{{discription}}</p>
+          <div class="opr">
+            <a href="/{{_id}}" title="Edit"><i id="edit" class="fa-solid fa-pencil"></i></a>  
+            <a href="/delete/{{_id}}" title="Delete"><i id="delete" class="fa-solid fa-trash"></i></a>  
+            <span class="time">{{time}}</span>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+    <!-- footer -->
+    <footer id="footer">myblog@copyright</footer>
+
+    <script src="toggle.js"></script>
+  </body>
+</html>
